@@ -11,7 +11,7 @@ type Getter interface {
 
 type DefaultGetter interface {
 	Get(key string) interface{}
-	GetOrDefault(key string, def string) interface{}
+	GetOrDefault(key string, def interface{}) interface{}
 }
 
 type StringGetter interface {
