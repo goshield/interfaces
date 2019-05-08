@@ -5,6 +5,7 @@ type Getter interface {
 	StringGetter
 	FloatGetter
 	BoolGetter
+	UIntGetter
 	IntGetter
 }
 
@@ -23,6 +24,10 @@ type BoolGetter interface {
 
 type IntGetter interface {
 	GetInt(key string) int64
+}
+
+type UIntGetter interface {
+	GetUInt(key string) uint64
 }
 
 type FloatGetter interface {
