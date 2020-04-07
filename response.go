@@ -1,5 +1,9 @@
 package interfaces
 
+import (
+	"context"
+)
+
 // Response is a HTTP response
 type Response interface {
 	Status() int
@@ -13,4 +17,7 @@ type Response interface {
 
 	Body() interface{}
 	WithBody(body interface{}) Response
+
+	Context() context.Context
+	WithContext(ctx context.Context) Response
 }
